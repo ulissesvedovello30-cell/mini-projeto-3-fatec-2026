@@ -3,8 +3,3 @@ class No:
         self.content = content
         self.next = None
 
-piece_a = No("Peça A")
-piece_b = No("Peça B")
-
-piece_a.next = piece_b
-
