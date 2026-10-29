@@ -3,6 +3,7 @@ class Queue:
     def __init__(self):
         self.first = None
         self.last = None
+        self.size = 0
 
     def add (self, content):
      new_content = No(content)
@@ -15,6 +16,7 @@ class Queue:
      else:
         self.last.next = new_content
         self.last = new_content
+     self.size += 1
 
     def remove(self):
         if self.first is None: # caso não tenha ninguém para remover ele retorna None(nada)
@@ -22,8 +24,27 @@ class Queue:
         else:
             removed = self.first # Aqui o first se torna o elemento que vai ser removido
             self.first = removed.next # Então ele aponta para o proximo elemento
+            self.size -= 1
             if self.first is None:
                 self.last = None
                 return removed
             else:
                 return removed
+
+    def is_empty(self):
+        return self.first is None
+
+    def peek(self):
+        # olha quem é o primeiro sem tirar da fila
+        if self.first is None:
+            return None
+        return self.first.content
+
+    def __iter__(self): # percorre da frente para o fim sem remover ninguém
+        actual = self.first
+        while actual is not None:
+            yield actual.content
+            actual = actual.next
+
+    def __len__(self):
+        return self.size

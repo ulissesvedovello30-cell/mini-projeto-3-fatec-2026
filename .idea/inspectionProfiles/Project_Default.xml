@@ -1,0 +1,22 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="python-telegram-bot" />
+          <option value="google-generativeai" />
+          <option value="mysql-connector-python" />
+          <option value="python-dotenv" />
+          <option value="bcrypt" />
+          <option value="numpy" />
+          <option value="pypdf" />
+          <option value="sentence-transformers" />
+          <option value="transformers" />
+          <option value="accelerate" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
